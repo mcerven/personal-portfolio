@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Layout from '../layouts';
+import PropTypes from 'prop-types';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -7,4 +8,9 @@ export default function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </Layout>
   );
+}
+
+Layout.propTypes = {
+  Component: PropTypes.func,
+  pageProps: PropTypes.any,
 }

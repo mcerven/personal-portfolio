@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className="container px-4 py-6 flex justify-center text-xs relative">
+    <footer className="container px-4 py-6 flex justify-center text-xs relative">
       <div className="flex flex-col items-center flex-1">
         <div>Developed by Mario Cerven © 2021</div>
         <div className="flex flex-row mt-1">
@@ -23,17 +23,6 @@ export default function Footer() {
         </div>
         </div>
       </div>
-      <div className="justify-self-end absolute bottom-2 right-1">
-        Built with <ExternalLink href="https://nextjs.org">Next.js</ExternalLink>, <ExternalLink href="https://tailwindcss.com">Tailwind CSS</ExternalLink>
-      </div>
-    </div>
+    </footer>
   );
 }
-function ExternalLink({children, ...props}) {
-  return (
-    <a {...props} className="hover:text-accent">
-      {children}
-    </a>
-  );
-}
-

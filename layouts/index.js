@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Footer from './Footer';
 import Header from './Header';
+import PropTypes from 'prop-types';
 
 export default function Layout({children}) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -22,4 +23,8 @@ export default function Layout({children}) {
       </div>
     </div>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.any,
 }

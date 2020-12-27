@@ -7,7 +7,7 @@ export default function About() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex pt-6">about</div>
+      <div className="flex pt-6 text-primary">about</div>
     </div>
   )
 }

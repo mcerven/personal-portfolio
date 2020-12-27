@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 export default function Header({isDarkTheme, setIsDarkTheme}) {
   const imageUrl = isDarkTheme 
@@ -34,12 +35,21 @@ export default function Header({isDarkTheme, setIsDarkTheme}) {
   )
 }
 
-function HeaderLink({children, ...props}) {
+Header.propTypes = {
+  isDarkTheme: PropTypes.bool.isRequired,
+  setIsDarkTheme: PropTypes.func.isRequired,
+}
+
+function HeaderLink({children, href, ...props}) {
   return (
     <li className="ml-5 text-primary text-base font-medium
       border-transparent border-b-2 hover:border-accent transition-colors-300">
-      <Link {...props}>{children}</Link>
+      <Link href={href} {...props}>{children}</Link>
     </li>
   );
 }
 
+HeaderLink.propTypes = {
+  children: PropTypes.any.isRequired,
+  href: PropTypes.string.isRequired,
+}
