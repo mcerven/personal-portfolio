@@ -7,20 +7,28 @@ export default function Header({isDarkTheme, setIsDarkTheme}) {
     : "https://www.flaticon.com/svg/static/icons/svg/1829/1829241.svg";
 
   return (
-    <div className="py-4 flex flex-row items-center">
-      <div className="flex-grow text-accent">Logo</div>
+    <div className="container px-4 py-1 flex flex-row items-center">
+      <div className="flex-grow text-accent">
+        <Link href="/">
+          <a>
+            <img
+              className="w-12 h-12"
+              src="https://www.flaticon.com/svg/static/icons/svg/876/876019.svg"
+              alt="Coding" />
+          </a>
+        </Link>
+      </div>
       <nav className="flex items-center">
+        <ul className="flex flex-row ">
+          <HeaderLink href="/about">About</HeaderLink>
+        </ul>
         <button
           aria-label="Toggle dark mode"
-          className="w-5 h-5 focus:outline-none"
+          className="w-5 h-5 ml-5 focus:outline-none"
           onClick={() => setIsDarkTheme(value => !value)}
           >
             <img src={imageUrl} alt="Brightness" />
         </button>
-        <ul className="flex flex-row">
-          <HeaderLink href="/">Home</HeaderLink>
-          <HeaderLink href="/about">About</HeaderLink>
-        </ul>
       </nav>
     </div>
   )
@@ -28,7 +36,8 @@ export default function Header({isDarkTheme, setIsDarkTheme}) {
 
 function HeaderLink({children, ...props}) {
   return (
-    <li className="ml-5 text-primary text-base font-medium border-transparent border-b-2 hover:border-accent">
+    <li className="ml-5 text-primary text-base font-medium
+      border-transparent border-b-2 hover:border-accent transition-colors-300">
       <Link {...props}>{children}</Link>
     </li>
   );

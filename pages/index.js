@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Profile from '../components/Profile';
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="flex pt-6 text-primary">index</h1>
+      <Profile />
     </div>
   )
 }

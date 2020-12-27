@@ -14,6 +14,7 @@ module.exports = {
         accent: 'var(--color-accent)',
         primaryBg: 'var(--color-primaryBg)',
         secondaryBg: 'var(--color-secondaryBg)',
+        onSecondaryBg: 'var(--color-onSecondaryBg)',
       },
     },
   },

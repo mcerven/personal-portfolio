@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg;
-}
-
 :root {
   --color-primary-100: theme('colors.green.100');
   --color-primary-200: theme('colors.green.200');
@@ -33,13 +29,23 @@
   --color-secondary: var(--color-neutral-700);
   --color-accent: var(--color-primary-300);
   --color-primaryBg: var(--color-neutral-100);
-  --color-secondaryBg: var(--color-neutral-300);
+  --color-secondaryBg: #131947;
+  --color-onSecondaryBg: var(--color-neutral-300);
 }
 
 .dark {
   --color-primary: var(--color-neutral-100);
   --color-secondary: var(--color-neutral-300);
-  --color-accent: var(--color-primary-700);
-  --color-primaryBg: var(--color-neutral-900);
-  --color-secondaryBg: var(--color-neutral-700);
+  --color-accent: var(--color-primary-400);
+  --color-primaryBg: #080a1a;
+  --color-secondaryBg: #131947;
+  --color-onSecondaryBg: var(--color-neutral-300);
+}
+
+.container {
+  @apply mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg;
+}
+
+.transition-colors-300 {
+  @apply transition-colors duration-300 ease-in-out;
 }
