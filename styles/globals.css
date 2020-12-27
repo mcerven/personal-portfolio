@@ -38,7 +38,7 @@
   --color-secondary: var(--color-neutral-300);
   --color-accent: var(--color-primary-400);
   --color-primaryBg: #080a1a;
-  --color-secondaryBg: #131947;
+  --color-secondaryBg: #080a1a;
   --color-onSecondaryBg: var(--color-neutral-300);
 }
 
