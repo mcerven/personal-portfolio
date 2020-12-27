@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="main font-sans">
       <Head>
-        <title>Create Next App</title>
+        <title>My profile - Mario Cerven</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Profile />
