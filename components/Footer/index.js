@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="container px-4 py-6 flex justify-center text-xs relative">
       <div className="flex flex-col items-center flex-1">

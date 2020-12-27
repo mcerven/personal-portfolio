@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Profile from '../components/Profile';
+import { Profile } from '../components';
 
 export default function Home() {
   return (

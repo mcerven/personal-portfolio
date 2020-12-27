@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import Footer from './Footer';
-import Header from './Header';
+import { Header, Footer } from 'components';
 import PropTypes from 'prop-types';
 
 export default function Layout({children}) {
@@ -12,11 +11,11 @@ export default function Layout({children}) {
         <div>
           <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         </div>
-        <div className="mt-2 mb-4 flex-1">
+        <main className="mt-2 mb-4 flex-1">
           <div className="container px-4">
             {children}
           </div>
-        </div>
+        </main>
         <div className="w-full bg-secondaryBg text-onSecondaryBg">
           <Footer />
         </div>

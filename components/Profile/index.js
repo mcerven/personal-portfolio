@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Profile() {
+export function Profile() {
   return (
     <div className="text-primary transition-colors-300">
       <h1>
@@ -10,5 +10,3 @@ function Profile() {
     </div>
   )
 }
-
-export default Profile

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-export default function Header({isDarkTheme, setIsDarkTheme}) {
+export function Header({isDarkTheme, setIsDarkTheme}) {
   const imageUrl = isDarkTheme 
     ? "https://www.flaticon.com/svg/static/icons/svg/1829/1829191.svg"
     : "https://www.flaticon.com/svg/static/icons/svg/1829/1829241.svg";
