@@ -7,18 +7,18 @@ export default function Layout({children}) {
 
   return (
     <div className={`${isDarkTheme ? 'dark' : ''}`}>
-      <div className="min-h-screen bg-primaryBg flex flex-col transition-colors-300">
-        <div>
+      <div className="min-h-screen flex flex-col">
+        <header className="sticky top-0 z-10 bg-primaryBg transition-colors-300">
           <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
-        </div>
-        <main className="mt-2 mb-4 flex-1">
+        </header>
+        <main className="pt-2 pb-4 flex-1 bg-primaryBg transition-colors-300">
           <div className="container px-4">
             {children}
           </div>
         </main>
-        <div className="w-full bg-secondaryBg text-onSecondaryBg">
+        <footer className="bg-secondaryBg text-onSecondaryBg transition-colors-300">
           <Footer />
-        </div>
+        </footer>
       </div>
     </div>
   )

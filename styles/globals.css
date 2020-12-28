@@ -29,8 +29,8 @@
   --color-secondary: var(--color-neutral-700);
   --color-accent: var(--color-primary-300);
   --color-primaryBg: var(--color-neutral-100);
-  --color-secondaryBg: #131947;
-  --color-onSecondaryBg: var(--color-neutral-300);
+  --color-secondaryBg: var(--color-neutral-100);
+  --color-onSecondaryBg: var(--color-neutral-600);
 }
 
 .dark {
@@ -48,4 +48,8 @@
 
 .transition-colors-300 {
   @apply transition-colors duration-300 ease-in-out;
+}
+
+footer {
+  box-shadow: 0 -2px 15px -5px rgba(0, 0, 0, 0.1);
 }
