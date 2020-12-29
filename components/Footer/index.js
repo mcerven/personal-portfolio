@@ -1,11 +1,13 @@
+import SocialMediaLinks from 'components/SocialMediaLinks';
 import React from 'react';
 
 export function Footer() {
   return (
-    <div className="container px-4 py-4 flex justify-center text-xs opacity-80 relative">
-      <div className="flex flex-col">
-        <div>Mario Cerven © 2021</div>
+    <footer className="bg-secondaryBg text-onSecondaryBg transition-colors-300">
+      <div className="container px-4 py-4 flex items-center text-sm relative">
+        <div className="flex-1">Made with ♥ by Mario Cerven © 2021</div>
+        <div><SocialMediaLinks /></div>
       </div>
-    </div>
+    </footer>
   );
 }
