@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --color-primary-100: theme('colors.green.100');
-  --color-primary-200: theme('colors.green.200');
-  --color-primary-300: theme('colors.green.300');
-  --color-primary-400: theme('colors.green.400');
-  --color-primary-500: theme('colors.green.500');
-  --color-primary-600: theme('colors.green.600');
-  --color-primary-700: theme('colors.green.700');
-  --color-primary-800: theme('colors.green.800');
-  --color-primary-900: theme('colors.green.900');
+  --color-primary-0:   theme('colors.white');
+  --color-primary-100: theme('colors.indigo.100');
+  --color-primary-200: theme('colors.indigo.200');
+  --color-primary-300: theme('colors.indigo.300');
+  --color-primary-400: theme('colors.indigo.400');
+  --color-primary-500: theme('colors.indigo.500');
+  --color-primary-600: theme('colors.indigo.600');
+  --color-primary-700: theme('colors.indigo.700');
+  --color-primary-800: theme('colors.indigo.800');
+  --color-primary-900: theme('colors.indigo.900');
 
+  --color-neutral-0:   theme('colors.white');
   --color-neutral-100: theme('colors.gray.100');
   --color-neutral-200: theme('colors.gray.200');
   --color-neutral-300: theme('colors.gray.300');
@@ -22,24 +24,27 @@
   --color-neutral-700: theme('colors.gray.700');
   --color-neutral-800: theme('colors.gray.800');
   --color-neutral-900: theme('colors.gray.900');
+  --color-neutral-1000: theme('colors.black');
 }
 
 :root {
-  --color-primary: var(--color-neutral-900);
-  --color-secondary: var(--color-neutral-700);
+  --color-primary: var(--color-neutral-1000);
+  --color-secondary: var(--color-neutral-500);
   --color-accent: var(--color-primary-500);
-  --color-primaryBg: var(--color-neutral-100);
-  --color-secondaryBg: var(--color-neutral-100);
-  --color-onSecondaryBg: var(--color-neutral-600);
+  --color-primaryBg: var(--color-neutral-0);
+  --color-secondaryBg: var(--color-primaryBg);
+  --color-accentBg: var(--color-primary-100);
+  --color-onSecondaryBg: var(--color-secondary);
 }
 
 .dark {
-  --color-primary: var(--color-neutral-100);
-  --color-secondary: var(--color-neutral-300);
+  --color-primary: var(--color-neutral-0);
+  --color-secondary: var(--color-neutral-200);
   --color-accent: var(--color-primary-400);
-  --color-primaryBg: #080a1a;
-  --color-secondaryBg: #080a1a;
-  --color-onSecondaryBg: var(--color-neutral-300);
+  --color-primaryBg:  rgb(8, 10, 30);
+  --color-secondaryBg: rgb(8, 10, 30);
+  --color-accentBg: rgb(19, 23, 73);
+  --color-onSecondaryBg: var(--color-secondary);
 }
 
 .container {
