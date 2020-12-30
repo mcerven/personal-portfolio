@@ -19,5 +19,5 @@ export function Profile() {
         </article>
       </div>
     </section>
-  )
+  );
 }

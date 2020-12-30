@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* custom palette */
 :root {
   --color-primary-0:   theme('colors.white');
   --color-primary-100: theme('colors.indigo.100');
@@ -27,6 +28,7 @@
   --color-neutral-1000: theme('colors.black');
 }
 
+/* light mode */
 :root {
   --color-primary: var(--color-neutral-1000);
   --color-secondary: var(--color-neutral-500);
@@ -37,6 +39,7 @@
   --color-onSecondaryBg: var(--color-secondary);
 }
 
+/* dark mode */
 .dark {
   --color-primary: var(--color-neutral-0);
   --color-secondary: var(--color-neutral-200);

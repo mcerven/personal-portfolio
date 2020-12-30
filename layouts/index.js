@@ -9,7 +9,7 @@ export default function Layout({children}) {
     <div className={`${isDarkTheme ? 'dark' : ''}`}>
       <div className="min-h-screen flex flex-col">
         <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
-        <main className="pt-10 pb-14 flex-1 bg-primaryBg transition-colors-300">
+        <main className="pt-12 pb-14 flex-1 bg-primaryBg transition-colors-300">
           <div className="container px-4">
             {children}
           </div>

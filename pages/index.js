@@ -1,7 +1,7 @@
 import Skills from 'components/Skills';
 import { educationItems, experienceItems, skills } from 'data/site-data';
 import Head from 'next/head';
-import { Profile, Experience } from '../components';
+import { SectionWrapper, Profile, Experience } from '../components';
 
 export default function Home() {
   return (
@@ -10,10 +10,20 @@ export default function Home() {
         <title>My profile - Mario Cerven</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Profile />
-      <Experience title="Experience" experienceItems={experienceItems} />
-      <Experience title="Education" experienceItems={educationItems} />
-      <Skills skills={skills} />
+
+      <SectionWrapper title="Skills" fullWidth={true}>
+        <Skills skills={skills} />
+      </SectionWrapper>
+
+      <SectionWrapper title="Experience" fullWidth={false}>
+        <Experience experienceItems={experienceItems} />
+      </SectionWrapper>
+
+      <SectionWrapper title="Education" fullWidth={false}>
+        <Experience experienceItems={educationItems} />
+      </SectionWrapper>
     </div>
   )
 }
