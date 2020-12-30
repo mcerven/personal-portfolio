@@ -8,7 +8,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
     : "https://www.flaticon.com/svg/static/icons/svg/1829/1829241.svg";
 
   return (
-    <header className="sticky top-0 z-10">
+    <header className="sticky top-0 z-10 bg-primaryBg transition-colors-300">
       <div className="container px-4 pt-2 pb-1 flex flex-row items-center">
         <div className="flex-grow text-accent">
           <div className="w-8 h-8">
