@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { authorName } from 'data/site-data';
 
 export function Header({isDarkTheme, setIsDarkTheme}) {
   const imageUrl = isDarkTheme 
@@ -14,7 +15,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
           <Link href="/">
             <a aria-label="Home" title="Home" className="flex gap-2 items-center">
               <img className="rounded-full w-10 h-10 object-contain border-2 border-accent" src="/assets/images/profile/profile-picture.jpg" alt="Profile picture" />
-              <span>Mario Cerven</span>
+              <span>{authorName}</span>
             </a>
           </Link>
         </div>

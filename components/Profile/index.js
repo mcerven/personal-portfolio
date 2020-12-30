@@ -1,3 +1,4 @@
+import { profileText } from 'data/site-data';
 import React from 'react';
 import SocialMediaLinks from '../SocialMediaLinks';
 
@@ -12,7 +13,7 @@ export function Profile() {
           <div className="my-4 text-2xl text-accent">
             <SocialMediaLinks />
           </div>
-          <p>I'm Mario Cerven and I am a web developer. I work remotely from Slovakia.</p>
+          <p>{profileText}</p>
         </article>
       </div>
     </section>
