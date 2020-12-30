@@ -4,7 +4,7 @@ export const experienceItems = [
     title: "Software Developer (.NET and Angular)",
     subTitle: "Panaxeo",
     startDate: "2020",
-    location: "Remotely",
+    location: "Remote",
     imgSrc: "/assets/images/experience/panaxeo.jpg",
   },
   {
