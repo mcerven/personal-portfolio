@@ -14,15 +14,15 @@ export default function Home() {
 
       <Profile />
 
-      <SectionWrapper title="Skills" fullWidth={true}>
+      <SectionWrapper id="skills" title="Skills" fullWidth={true}>
         <Skills skills={skills} />
       </SectionWrapper>
 
-      <SectionWrapper title="Experience" fullWidth={false}>
+      <SectionWrapper id="experience" title="Experience" fullWidth={false}>
         <Experience experienceItems={experienceItems} />
       </SectionWrapper>
 
-      <SectionWrapper title="Education" fullWidth={false}>
+      <SectionWrapper id="education" title="Education" fullWidth={false}>
         <Experience experienceItems={educationItems} />
       </SectionWrapper>
     </div>

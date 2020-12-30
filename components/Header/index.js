@@ -9,7 +9,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
 
   return (
     <header className="sticky top-0 z-10 bg-primaryBg transition-colors-300">
-      <div className="container px-4 pt-2 pb-1 flex flex-row items-center">
+      <div className="container header-height px-4 pt-2 pb-1 flex flex-row items-center">
         <div className="flex-grow text-accent">
           <div className="w-8 h-8">
             <Link href="/">
@@ -26,9 +26,11 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
           </div>
         </div>
         <nav className="flex items-center">
-          {/* <ul className="flex flex-row ">
-            <HeaderLink href="/contact">Contact</HeaderLink>
-          </ul> */}
+          <ul className="flex flex-row ">
+            <HeaderLink href="#skills">Skills</HeaderLink>
+            <HeaderLink href="#experience">Experience</HeaderLink>
+            <HeaderLink href="#education">Education</HeaderLink>
+          </ul>
           <button
             aria-label="Toggle dark mode"
             className="w-5 h-5 ml-5 focus:outline-none"
