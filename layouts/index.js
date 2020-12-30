@@ -7,7 +7,7 @@ export default function Layout({children}) {
 
   return (
     <div className={`${isDarkTheme ? 'dark' : ''}`}>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col" style={{minHeight: '100vh'}}>
         <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         <main className="flex-1 bg-primaryBg transition-colors-300" style={{paddingTop: '3rem', paddingBottom: '3.5rem'}}>
           <div className="container px-4">

@@ -26,9 +26,9 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
           </div>
         </div>
         <nav className="flex items-center">
-          <ul className="flex flex-row ">
+          {/* <ul className="flex flex-row ">
             <HeaderLink href="/contact">Contact</HeaderLink>
-          </ul>
+          </ul> */}
           <button
             aria-label="Toggle dark mode"
             className="w-5 h-5 ml-5 focus:outline-none"
