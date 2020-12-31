@@ -10,7 +10,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
 
   return (
     <header className="sticky top-0 z-30 bg-primaryBg transition-colors-300">
-      <div className="container header-height px-4 pt-2 pb-1 flex flex-row items-center">
+      <div className="container header-height px-4 pt-2 pb-1 flex flex-row items-center justify-between">
         <div className="text-accent">
           <Link href="/">
             <a aria-label="Home" title="Home" className="flex gap-2 items-center">
@@ -19,8 +19,8 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
             </a>
           </Link>
         </div>
-        <nav className="flex items-center ml-auto">
-          <ul className="flex flex-row ">
+        <nav className="flex items-center justify-end flex-wrap">
+          <ul className="flex flex-row justify-end">
             <HeaderLink href="/#skills">Skills</HeaderLink>
             <HeaderLink href="/#experience">Experience</HeaderLink>
             <HeaderLink href="/#education">Education</HeaderLink>
