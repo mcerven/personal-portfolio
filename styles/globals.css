@@ -39,9 +39,9 @@
   --color-secondary: var(--color-neutral-500);
   --color-accent: var(--color-primary-500);
   --color-primaryBg: var(--color-neutral-0);
-  --color-secondaryBg: var(--color-primaryBg);
+  --color-secondaryBg: rgb(8, 10, 30);
   --color-accentBg: var(--color-primary-100);
-  --color-onSecondaryBg: var(--color-secondary);
+  --color-onSecondaryBg: var(--color-neutral-200);
 }
 
 /* dark mode */
