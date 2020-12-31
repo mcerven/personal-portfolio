@@ -1,6 +1,6 @@
 export const authorName = "Mario Cerven";
 export const profileText = `I'm ${authorName} and I am a web developer. I work remotely from Slovakia.`;
-export const footerText = `${authorName} © 2021`;
+export const footerText = `© 2021 ${authorName}`;
 
 export const experienceItems = [
   {

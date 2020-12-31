@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { authorName } from 'data/site-data';
+import NavLink from './NavLink';
+import routes from '../../data/routes';
 
 export function Header({isDarkTheme, setIsDarkTheme}) {
   const imageUrl = isDarkTheme 
@@ -10,7 +12,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
 
   return (
     <header className="sticky top-0 z-30 bg-primaryBg transition-colors-300">
-      <div className="container header-height px-4 pt-2 pb-1 flex flex-row items-center justify-between">
+      <div className="container header-height pt-2 pb-1 flex flex-row items-center justify-between">
         <div className="text-accent">
           <Link href="/">
             <a aria-label="Home" title="Home" className="hidden sm:flex flex-wrap space-x-2 items-center">
@@ -20,11 +22,10 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
           </Link>
         </div>
         <nav className="flex items-center justify-end flex-wrap">
-          <ul className="flex flex-row justify-end">
-            <HeaderLink href="/#skills">Skills</HeaderLink>
-            <HeaderLink href="/#experience">Experience</HeaderLink>
-            <HeaderLink href="/#education">Education</HeaderLink>
-            <HeaderLink href="/#projects">Projects</HeaderLink>
+          <ul className="flex flex-row justify-end space-x-5 text-primary text-base font-medium">
+            { routes.map(({href, text}) => 
+              <NavLink key={href} href={href}>{text}</NavLink>
+            )}
           </ul>
           <button
             aria-label="Toggle dark mode"
@@ -42,18 +43,4 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
 Header.propTypes = {
   isDarkTheme: PropTypes.bool.isRequired,
   setIsDarkTheme: PropTypes.func.isRequired,
-}
-
-function HeaderLink({children, ...props}) {
-  return (
-    <li className="ml-5 text-primary text-base font-medium
-      border-transparent border-b-2 hover:border-accent transition-colors-300">
-      <Link {...props}>{children}</Link>
-    </li>
-  );
-}
-
-HeaderLink.propTypes = {
-  children: PropTypes.any.isRequired,
-  href: PropTypes.string.isRequired,
 }

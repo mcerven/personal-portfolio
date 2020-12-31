@@ -10,7 +10,7 @@ export default function Layout({children}) {
       <div className="min-h-screen flex flex-col">
         <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         <main className="flex-1 bg-primaryBg transition-colors-300 pt-12 pb-14">
-          <div className="container px-4">
+          <div className="container">
             {children}
           </div>
         </main>

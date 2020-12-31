@@ -41,7 +41,9 @@
   --color-primaryBg: var(--color-neutral-0);
   --color-secondaryBg: rgb(8, 10, 30);
   --color-accentBg: var(--color-primary-100);
-  --color-onSecondaryBg: var(--color-neutral-200);
+  --color-onSecondaryBgPrimary: var(--color-neutral-200);
+  --color-onSecondaryBgSecondary: var(--color-neutral-400);
+  --color-onSecondaryBgAccent: var(--color-neutral-0);
 }
 
 /* dark mode */
@@ -52,19 +54,17 @@
   --color-primaryBg:  rgb(8, 10, 30);
   --color-secondaryBg: rgb(8, 10, 30);
   --color-accentBg: rgb(19, 23, 73);
-  --color-onSecondaryBg: var(--color-secondary);
+  --color-onSecondaryBgPrimary: var(--color-neutral-200);
+  --color-onSecondaryBgSecondary: var(--color-neutral-400);
+  --color-onSecondaryBgAccent: var(--color-neutral-0);
 }
 
 .container {
-  @apply mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg;
+  @apply mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg px-4;
 }
 
 .transition-colors-300 {
   @apply transition-colors duration-300 ease-in-out;
-}
-
-footer {
-  box-shadow: 0 -2px 15px -5px rgba(0, 0, 0, 0.1);
 }
 
 .header-height {
