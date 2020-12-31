@@ -1,6 +1,6 @@
 .skill__img {
   transition: filter 300ms ease-in-out;
-  filter: grayscale(0.85);
+  filter: grayscale(1);
 }
 
 .skill__img:hover {

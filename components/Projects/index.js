@@ -37,14 +37,13 @@ export default function Projects({ githubName }) {
     fetchColors(setColors);
   }, []);
 
+  if (!projects || projects.length <= 0) return null;
+
   return (
     <div className="flex flex-row flex-wrap">
-      { projects && projects.length > 0
-        ? (projects.map((project) =>
+      { projects.map((project) =>
           <Project key={project.id} languageColor={colors && colors[project.language]?.color} {...project} />
-        ))
-        : null
-      }
+      )}
     </div>
   );
 }

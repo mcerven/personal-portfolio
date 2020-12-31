@@ -21,7 +21,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
             </a>
           </Link>
         </div>
-        <nav className="flex items-center justify-end flex-wrap">
+        <nav className="flex items-center justify-end flex-wrap" aria-label="Header navbar" role="navigation">
           <ul className="flex flex-row justify-end space-x-5 text-primary text-base font-medium">
             { routes.map(({href, text}) => 
               <NavLink key={href} href={href}>{text}</NavLink>
