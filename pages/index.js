@@ -15,6 +15,10 @@ export default function Home() {
 
       <Profile />
 
+      <SectionWrapper id="projects" title="Projects" fullWidth={true}>
+        <Projects githubName="mcerven" />
+      </SectionWrapper>
+
       <SectionWrapper id="skills" title="Skills" fullWidth={true}>
         <Skills skills={skills} />
       </SectionWrapper>
@@ -25,10 +29,6 @@ export default function Home() {
 
       <SectionWrapper id="education" title="Education" fullWidth={false}>
         <Experience experienceItems={educationItems} />
-      </SectionWrapper>
-
-      <SectionWrapper id="projects" title="Projects" fullWidth={true}>
-        <Projects githubName="mcerven" />
       </SectionWrapper>
     </div>
   );
