@@ -74,3 +74,11 @@
 .section-anchor-offset {
   margin-top: calc(-1 * var(--header-height));
 }
+
+.social-media-link {
+  @apply hover:text-accent;
+}
+
+.bg-secondaryBg .social-media-link {
+  @apply hover:text-onSecondaryBgAccent;
+}

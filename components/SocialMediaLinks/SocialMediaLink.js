@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function SocialMediaLink({ title, href, children }) {
   return (
-    <div className="hover:text-onSecondaryBgAccent">
+    <div className="social-media-link">
       <Link href={href}>
         <a title={title}>
           {children}

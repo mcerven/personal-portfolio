@@ -4,12 +4,9 @@ import PropTypes from 'prop-types';
 import { authorName } from 'data/site-data';
 import NavLink from './NavLink';
 import routes from '../../data/routes';
+import ToggleDarkModeButton from './ToggleDarkModeButton';
 
-export function Header({isDarkTheme, setIsDarkTheme}) {
-  const imageUrl = isDarkTheme 
-    ? "https://www.flaticon.com/svg/static/icons/svg/1829/1829191.svg"
-    : "https://www.flaticon.com/svg/static/icons/svg/1829/1829241.svg";
-
+export function Header({ isDarkTheme, setIsDarkTheme }) {
   return (
     <header className="sticky top-0 z-30 bg-primaryBg transition-colors-300">
       <div className="container header-height pt-2 pb-1 flex flex-row items-center justify-between">
@@ -27,13 +24,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
               <NavLink key={href} href={href}>{text}</NavLink>
             )}
           </ul>
-          <button
-            aria-label="Toggle dark mode"
-            className="w-5 h-5 ml-5 focus:outline-none"
-            onClick={() => setIsDarkTheme(value => !value)}
-            >
-              <img src={imageUrl} alt="Brightness" />
-          </button>
+          <ToggleDarkModeButton isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         </nav>
       </div>
     </header>
