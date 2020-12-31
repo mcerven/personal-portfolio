@@ -9,7 +9,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
     : "https://www.flaticon.com/svg/static/icons/svg/1829/1829241.svg";
 
   return (
-    <header className="sticky top-0 z-10 bg-primaryBg transition-colors-300">
+    <header className="sticky top-0 z-30 bg-primaryBg transition-colors-300">
       <div className="container header-height px-4 pt-2 pb-1 flex flex-row items-center">
         <div className="text-accent">
           <Link href="/">
@@ -21,9 +21,9 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
         </div>
         <nav className="flex items-center ml-auto">
           <ul className="flex flex-row ">
-            <HeaderLink href="#skills">Skills</HeaderLink>
-            <HeaderLink href="#experience">Experience</HeaderLink>
-            <HeaderLink href="#education">Education</HeaderLink>
+            <HeaderLink href="/#skills">Skills</HeaderLink>
+            <HeaderLink href="/#experience">Experience</HeaderLink>
+            <HeaderLink href="/#education">Education</HeaderLink>
           </ul>
           <button
             aria-label="Toggle dark mode"
@@ -43,11 +43,11 @@ Header.propTypes = {
   setIsDarkTheme: PropTypes.func.isRequired,
 }
 
-function HeaderLink({href, children, ...props}) {
+function HeaderLink({children, ...props}) {
   return (
     <li className="ml-5 text-primary text-base font-medium
       border-transparent border-b-2 hover:border-accent transition-colors-300">
-      <Link href={href} {...props}>{children}</Link>
+      <Link {...props}>{children}</Link>
     </li>
   );
 }
