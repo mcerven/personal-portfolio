@@ -8,17 +8,15 @@ export default function Project({ name, html_url, description, language, languag
     <div className="w-full md:w-1/2 lg:w-1/3">
       <div className="h-full p-2 text-primary">
         <div className="flex flex-col border rounded p-3 h-full">
-          <Link href={html_url}>
-            <div className="flex space-x-1">
-              <LibraryIcon className="w-4" />
-              <a className="text-lg font-medium">{name}</a>
-            </div>
-          </Link>
-          <p className="py-2 text-secondary flex-1 overflow-hidden break-words" style={{minHeight: '3rem'}}>
+          <a href={html_url} target="_blank" rel="noopener noreferrer" className="flex space-x-1 text-lg font-medium">
+            <LibraryIcon className="w-4" />
+            <span>{name}</span>
+          </a>
+          <p className="py-2 text-secondary flex-1 overflow-hidden break-words" style={{ minHeight: '3rem' }}>
             {description}
           </p>
           <p className="flex items-center space-x-1">
-            <span className="w-4 h-4 rounded-full" style={{background: languageColor}}></span>
+            <span className="w-4 h-4 rounded-full" style={{ background: languageColor }}></span>
             <span>{language}</span>
           </p>
         </div>

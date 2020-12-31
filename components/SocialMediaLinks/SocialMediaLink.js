@@ -5,11 +5,9 @@ import PropTypes from 'prop-types';
 export default function SocialMediaLink({ title, href, children }) {
   return (
     <div className="social-media-link">
-      <Link href={href}>
-        <a title={title}>
-          {children}
-        </a>
-      </Link>
+      <a href={href} target="_blank" rel="noopener noreferrer" title={title}>
+        {children}
+      </a>
     </div>
   );
 }
