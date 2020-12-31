@@ -13,7 +13,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
       <div className="container header-height px-4 pt-2 pb-1 flex flex-row items-center justify-between">
         <div className="text-accent">
           <Link href="/">
-            <a aria-label="Home" title="Home" className="hidden sm:flex flex-wrap gap-2 items-center">
+            <a aria-label="Home" title="Home" className="hidden sm:flex flex-wrap space-x-2 items-center">
               <img className="rounded-full w-10 h-10 object-contain border-2 border-accent" src="/assets/images/profile/profile-picture.jpg" alt="Profile picture" />
               <span>{authorName}</span>
             </a>

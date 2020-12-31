@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function ListItem({ title, subTitle, startDate, endDate, location, description, imgSrc }) {
   return (
-    <article className="flex items-start gap-3 p-3 text-primary rounded-md hover:bg-accentBg">
+    <article className="flex items-start space-x-3 p-3 text-primary rounded-md hover:bg-accentBg">
       <figure className="mt-1 min-w-max flex-initial">
         <img width="56" height="56" src={imgSrc} alt={subTitle} loading="lazy" />
       </figure>
