@@ -1,3 +1,4 @@
+import Projects from 'components/Projects';
 import Skills from 'components/Skills';
 import { educationItems, experienceItems, authorName, skills } from 'data/site-data';
 import Head from 'next/head';
@@ -24,6 +25,10 @@ export default function Home() {
 
       <SectionWrapper id="education" title="Education" fullWidth={false}>
         <Experience experienceItems={educationItems} />
+      </SectionWrapper>
+
+      <SectionWrapper id="projects" title="Projects" fullWidth={true}>
+        <Projects githubName="mcerven" />
       </SectionWrapper>
     </div>
   );

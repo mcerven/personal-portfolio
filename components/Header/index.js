@@ -24,6 +24,7 @@ export function Header({isDarkTheme, setIsDarkTheme}) {
             <HeaderLink href="/#skills">Skills</HeaderLink>
             <HeaderLink href="/#experience">Experience</HeaderLink>
             <HeaderLink href="/#education">Education</HeaderLink>
+            <HeaderLink href="/#projects">Projects</HeaderLink>
           </ul>
           <button
             aria-label="Toggle dark mode"
