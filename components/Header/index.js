@@ -11,7 +11,7 @@ export function Header({ isDarkTheme, setIsDarkTheme }) {
       <div className="container header-height pt-2 pb-1 flex flex-row items-center justify-between">
         <div className="flex w-full justify-between items-center">
           <Link href="/">
-            <a aria-label="Home" title="Home" className="flex flex-wrap space-x-2 items-center text-accent">
+            <a aria-label="Home" title="Home" className="flex space-x-2 items-center text-accent">
               <img className="rounded-full w-10 h-10 object-contain border-2 border-accent" src="/assets/images/profile/profile-picture.jpg" alt="Profile picture" />
               <span>{authorName}</span>
             </a>

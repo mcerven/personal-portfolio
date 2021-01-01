@@ -13,9 +13,9 @@ export default function HeaderLinks() {
           className="hamburger-button w-4 h-4 flex flex-col justify-between md:hidden outline-none focus:outline-none relative"
           onClick={() => setIsOpen(val => !val)}
         >
-          <div className="w-full h-0.5 bg-black dark:bg-white transition"></div>
+          <div className="w-full h-0.5 bg-black dark:bg-white transition-transform"></div>
           <div className="w-full h-0.5 bg-black dark:bg-white"></div>
-          <div className="w-full h-0.5 bg-black dark:bg-white transition"></div>
+          <div className="w-full h-0.5 bg-black dark:bg-white transition-transform"></div>
         </button>
 
         <ul className="nav-links hidden md:flex flex-row gap-5 text-primary text-base font-medium transition-colors-300">
@@ -28,8 +28,13 @@ export default function HeaderLinks() {
           )}
         </ul>
         <style jsx>{`
+          .hamburger-button {
+            --rotate-base: 45deg;
+            --translate-base: 4.95px;
+          }
+
           .navbar.menu-open .hamburger-button > div:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(var(--rotate-base)) translate(var(--translate-base), var(--translate-base));
           }
 
           .navbar.menu-open .hamburger-button > div:nth-child(2) {
@@ -37,7 +42,7 @@ export default function HeaderLinks() {
           }
 
           .navbar.menu-open .hamburger-button > div:nth-child(3) {
-            transform: rotate(-45deg) translate(4.9px, -4.9px);
+            transform: rotate(calc(-1 * var(--rotate-base))) translate(var(--translate-base), calc(-1 * var(--translate-base)));
           }
 
           .navbar.menu-open .nav-links {
