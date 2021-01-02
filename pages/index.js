@@ -1,22 +1,15 @@
-import Projects from 'components/Projects';
+import Repositories from 'components/Repositories';
 import Skills from 'components/Skills';
-import { educationItems, experienceItems, authorName, skills } from 'data/site-data';
-import Head from 'next/head';
+import { educationItems, experienceItems, skills } from 'data/site-data';
 import { SectionWrapper, Profile, Experience } from '../components';
 
 export default function Home() {
   return (
     <div className="main font-sans flex flex-wrap">
-      <Head>
-        <title>My profile - {authorName}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&amp;display=swap" defer />
-      </Head>
-
       <Profile />
 
-      <SectionWrapper id="projects" title="Projects" fullWidth={true}>
-        <Projects githubName="mcerven" />
+      <SectionWrapper id="repositories" title="Repositories" fullWidth={true}>
+        <Repositories githubName="mcerven" />
       </SectionWrapper>
 
       <SectionWrapper id="skills" title="Skills" fullWidth={true}>

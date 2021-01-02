@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import Project from './Project';
-import { coolGray } from 'tailwindcss/colors';
+import Repository from './Repository';
 
 async function fetchProjects(githubName, setProjects) {
   try {
@@ -42,7 +41,7 @@ export default function Projects({ githubName }) {
   return (
     <div className="flex flex-row flex-wrap">
       { projects.map((project) =>
-          <Project key={project.id} languageColor={colors && colors[project.language]?.color} {...project} />
+          <Repository key={project.id} languageColor={colors && colors[project.language]?.color} {...project} />
       )}
     </div>
   );

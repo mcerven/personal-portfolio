@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import LibraryIcon from './LibraryIcon';
 
-export default function Project({ name, html_url, description, language, languageColor }) {
+export default function Repository({ name, html_url, description, language, languageColor }) {
   return (
     <div className="w-full md:w-1/2 lg:w-1/3">
       <div className="h-full p-2 text-primary">
@@ -25,7 +24,7 @@ export default function Project({ name, html_url, description, language, languag
   );
 }
 
-Project.propTypes = {
+Repository.propTypes = {
   name: PropTypes.string.isRequired,
   html_url: PropTypes.string.isRequired,
   description: PropTypes.string,
