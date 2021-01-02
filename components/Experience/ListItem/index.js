@@ -8,7 +8,7 @@ export default function ListItem({ title, subTitle, startDate, endDate, location
         <img width="56" height="56" src={imgSrc} alt={subTitle} loading="lazy" />
       </figure>
       <div className="flex-1 flex flex-col flex-wrap">
-        <h3 className="font-semibold leading-normal">{title}</h3>
+        <h3 className="font-medium leading-normal">{title}</h3>
         <div className="leading-snug">
           {subTitle && (<p>{subTitle}</p>)}
           <p className="text-secondary">{startDate} – {endDate || 'Present'}</p>

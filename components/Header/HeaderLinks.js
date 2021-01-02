@@ -18,7 +18,7 @@ export default function HeaderLinks() {
           <div className="w-full h-0.5 bg-black dark:bg-white transition-transform"></div>
         </button>
 
-        <ul className="nav-links hidden md:flex flex-row gap-5 text-primary text-base font-medium transition-colors-300">
+        <ul className="nav-links hidden md:flex flex-row gap-5 text-primary text-base font-normal transition-colors-300">
           {routes.map(({ href, text }) =>
             <NavLink key={href} href={href}>
               <a onClick={() => setIsOpen(false)}>

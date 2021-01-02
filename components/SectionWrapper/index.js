@@ -6,7 +6,7 @@ export function SectionWrapper({ id, title, fullWidth, children }) {
     <div className={`mt-20 w-full ${!fullWidth && 'lg:pr-10 lg:w-1/2'}`}>
       <div id={id} className="section-anchor-offset absolute w-0 h-0"></div>
       <section>
-        <h2 className="text-3xl font-semibold tracking-wide text-accent pb-5">{title}</h2>
+        <h2 className="text-5xl font-light tracking-wide text-accent pb-5">{title}</h2>
         {children}
       </section>
     </div>
