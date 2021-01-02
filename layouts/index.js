@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Header, Footer } from 'components';
 import PropTypes from 'prop-types';
+import BackgroundWave from 'components/BackgroundEffects/BackgroundWave';
 
 export default function Layout({children}) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -14,6 +15,7 @@ export default function Layout({children}) {
             {children}
           </div>
         </main>
+        <BackgroundWave topColor="var(--color-primaryBg)" bottomColor="var(--color-secondaryBg)" />
         <Footer />
       </div>
     </div>
