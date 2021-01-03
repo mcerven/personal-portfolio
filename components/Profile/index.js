@@ -11,7 +11,7 @@ export function Profile() {
           <h1 className="text-6xl font-light tracking-wide text-accent">
             Hi there!
           </h1>
-          <div className="my-5 text-2xl">
+          <div className="my-4 text-2xl">
             <SocialMediaLinks />
           </div>
           <p className="text-3xl font-light">{profileText}</p>
