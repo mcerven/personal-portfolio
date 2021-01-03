@@ -9,8 +9,8 @@ const siteUrl = 'https://mariocerven.netlify.app';
 const imageUrl = `${siteUrl}/assets/images/profile/profile-picture.jpg`;
 const jobTitle = 'Full-Stack Web Developer';
 const techStackShort = 'React, Angular, Next.js, .NET and more';
-const pageTitle = `${authorName} | ${jobTitle} | ${techStackShort}`;
-const description = `${jobTitle} based in Slovakia | ${techStackShort}`;
+const pageTitle = `${authorName} | ${jobTitle}`;
+const description = `I build websites using ${techStackShort}`;
 
 export default function Layout({children}) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -25,7 +25,7 @@ export default function Layout({children}) {
         <meta data-n-head="ssr" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="mariocerven.netlify.app" />
         <meta data-n-head="ssr" data-hid="og:type" name="og:type" property="og:type" content="website" />
         
-        <meta data-n-head="ssr" data-hid="twitter:card" name="twitter:type" content="summary_large_image" />
+        <meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image" />
         
         <meta data-n-head="ssr" data-hid="og:url" name="og:url" property="og:url" content={siteUrl} />
         <meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" property="twitter:url" content={siteUrl} />
