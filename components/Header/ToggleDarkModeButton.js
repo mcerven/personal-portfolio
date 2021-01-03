@@ -11,7 +11,7 @@ export default function ToggleDarkModeButton({ isDarkTheme, setIsDarkTheme }) {
       type="button"
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
-      className="w-5 h-5 ml-5 focus:outline-none select-none"
+      className="w-6 h-6 ml-5 p-0.5 select-none"
       onClick={() => setIsDarkTheme(value => !value)}
     >
       <img src={imageUrl} alt="Brightness" />

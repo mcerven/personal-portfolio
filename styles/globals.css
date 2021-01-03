@@ -66,19 +66,3 @@
 .transition-colors-300 {
   @apply transition-colors duration-300 ease-in-out;
 }
-
-.header-height {
-  height: var(--header-height);
-}
-
-.section-anchor-offset {
-  margin-top: calc(-1 * var(--header-height));
-}
-
-.social-media-link {
-  @apply hover:text-accent;
-}
-
-.bg-secondaryBg .social-media-link {
-  @apply hover:text-onSecondaryBgAccent;
-}

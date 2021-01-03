@@ -1,0 +1,7 @@
+.socialMediaLink {
+  @apply hover:text-accent;
+}
+
+.bg-secondaryBg .socialMediaLink {
+  @apply hover:text-onSecondaryBgAccent;
+}

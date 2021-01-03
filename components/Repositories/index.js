@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Repository from './Repository';
 
-async function fetchProjects(githubName, setProjects) {
+async function fetchRepositories(githubName, setRepositories) {
   try {
     const res = await fetch(`https://api.github.com/users/${githubName}/repos`);
-    const newProjects = await res.json();
-    setProjects(newProjects);
+    const newRepositories = await res.json();
+    setRepositories(newRepositories);
   }
   catch(err) {
     console.error(err);
@@ -24,29 +24,29 @@ async function fetchColors(setColors) {
   }
 }
 
-export default function Projects({ githubName }) {
-  const [projects, setProjects] = useState([]);
+export function Repositories({ githubName }) {
+  const [repositories, setRepositories] = useState([]);
   const [colors, setColors] = useState(null);
 
   useEffect(() => {
-    fetchProjects(githubName, setProjects);
+    fetchRepositories(githubName, setRepositories);
   }, []);
 
   useEffect(() => {
     fetchColors(setColors);
   }, []);
 
-  if (!projects || projects.length <= 0) return null;
+  if (!repositories || repositories.length <= 0) return null;
 
   return (
     <div className="flex flex-row flex-wrap">
-      { projects.map((project) =>
-          <Repository key={project.id} languageColor={colors && colors[project.language]?.color} {...project} />
+      { repositories.map((repo) =>
+          <Repository key={repo.id} languageColor={colors && colors[repo.language]?.color} {...repo} />
       )}
     </div>
   );
 }
 
-Projects.propTypes = {
+Repositories.propTypes = {
   githubName: PropTypes.string.isRequired,
 }

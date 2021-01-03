@@ -1,7 +1,6 @@
-import Repositories from 'components/Repositories';
 import Skills from 'components/Skills';
 import { educationItems, experienceItems, skills } from 'data/site-data';
-import { SectionWrapper, Profile, Experience } from '../components';
+import { SectionWrapper, Profile, Repositories, Experience } from '../components';
 
 export default function Home() {
   return (

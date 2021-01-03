@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './SocialMediaLink.module.css';
 
 export default function SocialMediaLink({ title, href, children }) {
   return (
-    <div className="social-media-link">
+    <div className={styles.socialMediaLink}>
       <a href={href} target="_blank" rel="noopener noreferrer" title={title}>
         {children}
       </a>

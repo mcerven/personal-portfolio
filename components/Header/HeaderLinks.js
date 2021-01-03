@@ -10,7 +10,7 @@ export default function HeaderLinks() {
       <div className={`navbar ${isOpen ? 'menu-open' : ''}`}>
         <button
           type="button"
-          className="hamburger-button w-4 h-4 flex flex-col justify-between md:hidden outline-none focus:outline-none relative"
+          className="hamburger-button w-5 h-5 p-0.5 flex flex-col justify-between md:hidden outline-none relative"
           onClick={() => setIsOpen(val => !val)}
         >
           <div className="w-full h-0.5 bg-black dark:bg-white transition-transform"></div>
