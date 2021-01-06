@@ -3,7 +3,7 @@ import React from 'react';
 import SocialMediaLinks from '../SocialMediaLinks';
 import WebDevImage from './WebDevImage';
 
-export function Profile() {
+export default function Profile() {
   return (
     <section className="text-primary transition-colors-300">
       <div className="flex flex-wrap">

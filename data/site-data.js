@@ -1,4 +1,5 @@
 export const authorName = "Mario Cerven";
+export const githubName = "mcerven";
 export const profileText = `I'm ${authorName} and I am a web developer. I work remotely from Slovakia.`;
 export const footerText = `© ${new Date().getFullYear()} - ${authorName}`;
 

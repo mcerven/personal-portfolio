@@ -4,7 +4,7 @@ import { footerText } from 'data/site-data';
 import NavLink from './NavLink';
 import routes from '../../data/routes';
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-secondaryBg text-onSecondaryBgSecondary text-sm transition-colors-300">
       <div className="container py-8 flex flex-col">

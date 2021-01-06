@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './index.module.css';
 
-export function SectionWrapper({ id, title, fullWidth, children }) {
+export default function SectionWrapper({ id, title, fullWidth, children }) {
   return (
     <div className={`mt-20 w-full ${!fullWidth && 'lg:pr-10 lg:w-1/2'}`}>
       <div id={id} className={`${styles.sectionAnchorOffset} absolute w-0 h-0`}></div>

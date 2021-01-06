@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { Header, Footer } from 'components';
 import PropTypes from 'prop-types';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
 import BackgroundWave from 'components/BackgroundEffects/BackgroundWave';
 import { authorName } from 'data/site-data';
 

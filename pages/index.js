@@ -1,14 +1,18 @@
+import Experience from 'components/Experience';
+import Profile from 'components/Profile';
+import Repositories from 'components/Repositories';
+import SectionWrapper from 'components/SectionWrapper';
 import Skills from 'components/Skills';
-import { educationItems, experienceItems, skills } from 'data/site-data';
-import { SectionWrapper, Profile, Repositories, Experience } from '../components';
+import { githubName, educationItems, experienceItems, skills } from 'data/site-data';
 
-export default function Home() {
+
+export default function Home({ repositories, colors }) {
   return (
     <div className="main font-sans flex flex-wrap">
       <Profile />
 
       <SectionWrapper id="repositories" title="Repositories" fullWidth={true}>
-        <Repositories githubName="mcerven" />
+        <Repositories repositories={repositories} colors={colors} />
       </SectionWrapper>
 
       <SectionWrapper id="skills" title="Skills" fullWidth={true}>
@@ -24,4 +28,38 @@ export default function Home() {
       </SectionWrapper>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const repositories = await fetchRepositories(githubName);
+  const colors = await fetchColors();
+
+  return {
+    props: {
+      repositories,
+      colors,
+    },
+  }
+}
+
+async function fetchRepositories(githubName) {
+  try {
+    const res = await fetch(`https://api.github.com/users/${githubName}/repos`);
+    const data = await res.json();
+    return data;
+  }
+  catch(err) {
+    console.error(err);
+  }
+}
+
+async function fetchColors() {
+  try {
+    const res = await fetch(`https://raw.githubusercontent.com/ozh/github-colors/master/colors.json`);
+    const data = await res.json();
+    return data;
+  }
+  catch(err) {
+    console.error(err);
+  }
 }

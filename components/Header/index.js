@@ -6,7 +6,7 @@ import ToggleDarkModeButton from './ToggleDarkModeButton';
 import HeaderLinks from './HeaderLinks';
 import styles from './index.module.css';
 
-export function Header({ isDarkTheme, setIsDarkTheme }) {
+export default function Header({ isDarkTheme, setIsDarkTheme }) {
   return (
     <header className="sticky top-0 z-30 bg-primaryBg transition-colors-300">
       <div className={`container ${styles.headerHeight} pt-2 pb-1 flex flex-row items-center justify-between`}>
