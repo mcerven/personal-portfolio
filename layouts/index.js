@@ -20,27 +20,25 @@ export default function Layout({children}) {
     <>
       <Head>
         <title>{pageTitle}</title>
-        <meta data-n-head="ssr" data-hid="author" name="author" content="Mario Cerven" />
         <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1" />
+        
+        <meta data-n-head="ssr" data-hid="author" name="author" content="Mario Cerven" />
+        <meta data-n-head="ssr" data-hid="keywords" name="keywords" property="keywords" content="fullstack developer,full stack developer,full-stack developer,web developer,frontend developer,front-end developer,javascript,react,react.js,react developer,angular,angular developer,.net,.net developer,c#,c# developer" />
+        <meta data-n-head="ssr" data-hid="description" name="description" property="description" content={description} />
         
         <meta data-n-head="ssr" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="mariocerven.netlify.app" />
         <meta data-n-head="ssr" data-hid="og:type" name="og:type" property="og:type" content="website" />
+        <meta data-n-head="ssr" data-hid="og:title" name="og:title" property="og:title" content={pageTitle} />
+        <meta data-n-head="ssr" data-hid="og:url" name="og:url" property="og:url" content={siteUrl} />
+        <meta data-n-head="ssr" data-hid="og:image" name="og:image" property="og:image" content={imageUrl} />
+        <meta data-n-head="ssr" data-hid="og:description" name="og:description" property="og:description" content={description} />
         
+        <meta data-n-head="ssr" data-hid="twitter:title" name="twitter:title" property="twitter:title" content={pageTitle} />
+        <meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" property="twitter:url" content={siteUrl} />
+        <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content={imageUrl} />
+        <meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" property="twitter:description" content={description} />
         <meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image" />
         
-        <meta data-n-head="ssr" data-hid="og:url" name="og:url" property="og:url" content={siteUrl} />
-        <meta data-n-head="ssr" data-hid="twitter:url" name="twitter:url" property="twitter:url" content={siteUrl} />
-        
-        <meta data-n-head="ssr" data-hid="og:image" name="og:image" property="og:image" content={imageUrl} />
-        <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content={imageUrl} />
-        
-        <meta data-n-head="ssr" data-hid="og:title" name="og:title" property="og:title" content={pageTitle} />
-        <meta data-n-head="ssr" data-hid="twitter:title" name="twitter:title" property="twitter:title" content={pageTitle} />
-        
-        <meta data-n-head="ssr" data-hid="keywords" name="keywords" property="keywords" content="fullstack developer,full stack developer,full-stack developer,web developer,frontend developer,front-end developer,javascript,react,react.js,react developer,angular,angular developer,.net,.net developer,c#,c# developer" />
-        <meta data-n-head="ssr" data-hid="description" name="description" property="description" content={description} />
-        <meta data-n-head="ssr" data-hid="og:description" name="og:description" property="og:description" content={description} />
-        <meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" property="twitter:description" content={description} />
         
         <link rel="icon" href="/favicon.ico" />
         <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&amp;display=swap" defer />
