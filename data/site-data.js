@@ -5,15 +5,13 @@ export const footerText = `© ${new Date().getFullYear()} - ${authorName}`;
 
 export const experienceItems = [
   {
-    id: 1,
-    title: "Software Developer (.NET and Angular)",
+    title: "Full-Stack .NET/Angular Developer",
     subTitle: "Panaxeo",
     startDate: "2020",
     location: "Remote",
     imgSrc: "/assets/images/experience/panaxeo.jpg",
   },
   {
-    id: 2,
     title: "Software Developer (.NET and Angular)",
     subTitle: "CRIF",
     startDate: "2019",
@@ -22,7 +20,6 @@ export const experienceItems = [
     imgSrc: "/assets/images/experience/crif.png",
   },
   {
-    id: 3,
     title: ".NET Developer",
     subTitle: "Descartes Systems Group",
     startDate: "Jul 2017",
@@ -31,7 +28,6 @@ export const experienceItems = [
     imgSrc: "/assets/images/experience/descartes.jpg",
   },
   {
-    id: 4,
     title: ".NET Developer",
     subTitle: "NetDirect s.r.o.",
     startDate: "Sep 2016",
@@ -40,8 +36,7 @@ export const experienceItems = [
     imgSrc: "/assets/images/experience/netdirect.png",
   },
   {
-    id: 5,
-    title: "Ruby on Rails Developer",
+    title: "Ruby on Rails Programmer",
     subTitle: "Railsformers",
     startDate: "Jul 2015",
     endDate: "Dec 2015",
@@ -52,7 +47,6 @@ export const experienceItems = [
 
 export const educationItems = [
   {
-    id: 1,
     title: "Technical University of Ostrava",
     subTitle: "Master's degree, Computer Science and Technology",
     startDate: "2012",

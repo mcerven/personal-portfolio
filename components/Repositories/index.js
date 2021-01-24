@@ -6,8 +6,8 @@ export default function Repositories({ repositories, colors }) {
 
   return (
     <div className="flex flex-row flex-wrap">
-      { repositories.map((repo) =>
-          <Repository key={repo.id} languageColor={colors && colors[repo.language]?.color} {...repo} />
+      { repositories.map((repo, index) =>
+          <Repository key={index} languageColor={colors && colors[repo.language]?.color} {...repo} />
       )}
     </div>
   );
