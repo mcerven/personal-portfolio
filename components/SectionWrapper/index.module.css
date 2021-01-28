@@ -1,3 +1,5 @@
-.sectionAnchorOffset {
-  margin-top: calc(-1 * var(--header-height));
+.SectionWrapper {
+  --section-margin-y: 2rem;
+  scroll-margin-top: calc(var(--header-height) + var(--section-margin-y));
+  margin: var(--section-margin-y) 0;
 }
