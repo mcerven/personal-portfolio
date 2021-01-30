@@ -1,6 +1,6 @@
 export const authorName = "Mario Cerven";
 export const githubName = "mcerven";
-export const profileText = `I'm ${authorName} and I am a web developer. I work remotely from Slovakia.`;
+export const profileText = `I'm ${authorName} and I am a fullstack web developer. In my free time I enjoy learning new technologies.`;
 export const footerText = `© ${new Date().getFullYear()} - ${authorName}`;
 
 export const experienceItems = [
