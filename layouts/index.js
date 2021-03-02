@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import BackgroundWave from 'components/BackgroundEffects/BackgroundWave';
-import { authorName } from 'data/site-data';
+import { authorName, jobTitle } from 'data/site-data';
 
 const siteUrl = 'https://mariocerven.netlify.app';
 const imageUrl = `${siteUrl}/assets/images/profile/profile-picture.jpg`;
-const jobTitle = 'Full-Stack Web Developer';
 const techStackShort = 'React, Angular, Next.js, .NET and more';
 const pageTitle = `${authorName} | ${jobTitle}`;
 const description = `I build websites using ${techStackShort}`;

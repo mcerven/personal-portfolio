@@ -1,11 +1,12 @@
 export const authorName = "Mario";
 export const githubName = "mcerven";
-export const profileText = `I'm ${authorName} and I work as a Fullstack Developer. In my free time I enjoy learning new technologies.`;
-export const footerText = `© ${new Date().getFullYear()} - ${authorName}`;
+export const jobTitle = 'Full Stack Developer';
+export const profileText = `I'm ${authorName} and I work as a ${jobTitle}. In my free time I enjoy learning new technologies.`;
+export const footerText = `© 2021 - ${authorName}`;
 
 export const experienceItems = [
   {
-    title: "Full-Stack .NET/Angular Developer",
+    title: "Software Developer (.NET and Angular)",
     subTitle: "Panaxeo",
     startDate: "2020",
     location: "Remote",
