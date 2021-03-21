@@ -1,4 +1,4 @@
-import { profileText } from 'data/site-data';
+import { welcomeText } from 'data/site-data';
 import React from 'react';
 import SocialMediaLinks from '../SocialMediaLinks';
 import WebDevImage from './WebDevImage';
@@ -14,7 +14,7 @@ export default function Profile() {
           <div className="my-4 text-2xl">
             <SocialMediaLinks />
           </div>
-          <p className="text-3xl font-light">{profileText}</p>
+          <p className="text-3xl font-light">{welcomeText}</p>
         </article>
         <div className="text-accent w-full md:-mt-28 z-0">
           <WebDevImage className="md:ml-auto max-w-full" />
