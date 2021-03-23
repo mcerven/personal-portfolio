@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Skill from './Skill';
 
-export default function Skills({skills}) {
+export default function Skills({ skills }) {
   return (
     <div className="flex flex-wrap justify-center">
       { skills.map(({src, alt}) => 
@@ -10,3 +11,7 @@ export default function Skills({skills}) {
     </div>
   );
 }
+
+Skills.propTypes = {
+  skills: PropTypes.array.isRequired,
+};
