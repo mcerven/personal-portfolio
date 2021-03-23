@@ -8,15 +8,15 @@ export default function Profile() {
     <section className="text-primary transition-colors-300">
       <div className="flex flex-wrap">
         <article className="md:w-1/2 z-10">
-          <h1 className="text-6xl font-light tracking-wide text-accent">
+          <h1 data-aos="fade-up" className="text-6xl font-light tracking-wide text-accent">
             Hi there!
           </h1>
-          <div className="my-4 text-2xl">
+          <div data-aos="fade-up" className="my-4 text-2xl">
             <SocialMediaLinks />
           </div>
-          <p className="text-3xl font-light">{welcomeText}</p>
+          <p data-aos="fade-up" className="text-3xl font-light">{welcomeText}</p>
         </article>
-        <div className="text-accent w-full md:-mt-28 z-0">
+        <div data-aos="fade-up" className="text-accent w-full md:-mt-28 z-0">
           <WebDevImage className="md:ml-auto max-w-full" />
         </div>
       </div>

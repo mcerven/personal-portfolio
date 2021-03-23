@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import BackgroundWave from 'components/BackgroundEffects/BackgroundWave';
@@ -14,6 +16,13 @@ const description = `I build websites using ${techStackShort}`;
 
 export default function Layout({children}) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <>
@@ -38,7 +47,6 @@ export default function Layout({children}) {
         <meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" property="twitter:description" content={description} />
         <meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary_large_image" />
         
-        
         <link rel="icon" href="/favicon.ico" />
         <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&amp;display=swap" defer />
       </Head>
@@ -60,4 +68,4 @@ export default function Layout({children}) {
 
 Layout.propTypes = {
   children: PropTypes.any,
-}
+};

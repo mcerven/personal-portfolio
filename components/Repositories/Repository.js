@@ -4,7 +4,7 @@ import LibraryIcon from './LibraryIcon';
 
 export default function Repository({ name, html_url, description, language, languageColor }) {
   return (
-    <div className="w-full md:w-1/2 lg:w-1/3">
+    <div data-aos="fade-up" className="w-full md:w-1/2 lg:w-1/3">
       <div className="h-full p-2 text-primary">
         <div className="flex flex-col border rounded p-3 h-full">
           <a href={html_url} target="_blank" rel="noopener noreferrer" className="flex space-x-1 text-lg font-medium">
