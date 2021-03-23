@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialMediaLinks from 'components/SocialMediaLinks';
-import { footerText } from 'data/site-data';
+import { authorName, year } from 'data/site-data';
 import NavLink from './NavLink';
 import routes from '../../data/routes';
 
@@ -19,7 +19,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="flex">
-          <div className="flex-1">{footerText}</div>
+          <div className="flex-1">Created with <span className="animate-pulse">❤️</span> by {authorName} © {year}</div>
           <div className="text-lg"><SocialMediaLinks /></div>
         </div>
       </div>

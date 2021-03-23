@@ -1,8 +1,8 @@
-export const authorName = "Mario";
-export const githubName = "mcerven";
+export const authorName = 'Mario Cerven';
+export const githubName = 'mcerven';
+export const year = 2021;
 export const jobTitle = 'Full Stack Developer';
 export const welcomeText = `I'm ${authorName} and I work as a ${jobTitle}. Welcome to my personal website!`;
-export const footerText = `© 2021 - ${authorName}`;
 
 export const experienceItems = [
   {
