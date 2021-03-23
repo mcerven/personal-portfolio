@@ -28,4 +28,4 @@ ListItem.propTypes = {
   location: PropTypes.string,
   description: PropTypes.string,
   imgSrc: PropTypes.string,
-}
+};

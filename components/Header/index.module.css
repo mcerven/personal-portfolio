@@ -1,3 +1,7 @@
 .headerHeight {
   height: var(--header-height);
 }
+
+.headerHidden {
+  top: calc(-1 * var(--header-height));
+}

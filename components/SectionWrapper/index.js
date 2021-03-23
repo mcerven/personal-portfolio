@@ -16,4 +16,4 @@ SectionWrapper.propTypes = {
   title: PropTypes.string.isRequired,
   fullWidth: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-}
+};

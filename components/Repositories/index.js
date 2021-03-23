@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Repository from './Repository';
 
 export default function Repositories({ repositories, colors }) {
-  if (!repositories || repositories.length <= 0) return null;
+  if (!repositories || !repositories.length) return null;
 
   return (
     <div className="flex flex-row flex-wrap">
@@ -16,5 +16,5 @@ export default function Repositories({ repositories, colors }) {
 
 Repositories.propTypes = {
   repositories: PropTypes.array.isRequired,
-  colors: PropTypes.array.isRequired,
+  colors: PropTypes.object.isRequired,
 };

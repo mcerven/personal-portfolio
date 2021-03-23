@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export default function BackgroundWave({topColor, bottomColor}) {
@@ -17,4 +17,4 @@ export default function BackgroundWave({topColor, bottomColor}) {
 BackgroundWave.propTypes = {
   topColor: PropTypes.string.isRequired,
   bottomColor: PropTypes.string.isRequired,
-}
+};

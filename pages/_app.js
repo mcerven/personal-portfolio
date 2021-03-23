@@ -11,6 +11,6 @@ export default function MyApp({ Component, pageProps }) {
 }
 
 Layout.propTypes = {
-  Component: PropTypes.func,
+  Component: PropTypes.object,
   pageProps: PropTypes.any,
 }

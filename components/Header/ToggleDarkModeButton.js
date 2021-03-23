@@ -22,4 +22,4 @@ export default function ToggleDarkModeButton({ isDarkTheme, setIsDarkTheme }) {
 ToggleDarkModeButton.propTypes = {
   isDarkTheme: PropTypes.bool.isRequired,
   setIsDarkTheme: PropTypes.func.isRequired,
-}
+};
