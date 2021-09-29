@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function ToggleDarkModeButton({ isDarkTheme, setIsDarkTheme }) {
-  const imageUrl = isDarkTheme
-    ? "https://www.flaticon.com/svg/static/icons/svg/1829/1829191.svg"
-    : "https://www.flaticon.com/svg/static/icons/svg/1829/1829241.svg";
+  const imgSrc = isDarkTheme
+    ? "/assets/images/brightness/light.png"
+    : "/assets/images/brightness/dark.png";
 
   return (
     <button
@@ -14,7 +14,7 @@ export default function ToggleDarkModeButton({ isDarkTheme, setIsDarkTheme }) {
       className="w-6 h-6 ml-5 p-0.5 select-none focus:outline-none"
       onClick={() => setIsDarkTheme(value => !value)}
     >
-      <img src={imageUrl} alt="Brightness" />
+      <img src={imgSrc} alt="Brightness" />
     </button>
   );
 }
