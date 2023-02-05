@@ -6,14 +6,14 @@ export const welcomeText = `I'm ${authorName} and I work as a ${jobTitle}. Welco
 
 export const experienceItems = [
   {
-    title: "Software Developer (.NET and Angular)",
+    title: "Software Engineer",
     subTitle: "Panaxeo",
     startDate: "2020",
     location: "Remote",
     imgSrc: "/assets/images/experience/panaxeo.jpg",
   },
   {
-    title: "Software Developer (.NET and Angular)",
+    title: "Software Engineer",
     subTitle: "CRIF",
     startDate: "2019",
     endDate: "2020",
@@ -21,7 +21,7 @@ export const experienceItems = [
     imgSrc: "/assets/images/experience/crif.png",
   },
   {
-    title: ".NET Developer",
+    title: "Software Developer",
     subTitle: "Descartes Systems Group",
     startDate: "Jul 2017",
     endDate: "Dec 2018",
@@ -29,7 +29,7 @@ export const experienceItems = [
     imgSrc: "/assets/images/experience/descartes.jpg",
   },
   {
-    title: ".NET Developer",
+    title: "Software Developer",
     subTitle: "NetDirect s.r.o.",
     startDate: "Sep 2016",
     endDate: "May 2017",
@@ -37,7 +37,7 @@ export const experienceItems = [
     imgSrc: "/assets/images/experience/netdirect.png",
   },
   {
-    title: "Ruby on Rails Programmer",
+    title: "Web Developer",
     subTitle: "Railsformers",
     startDate: "Jul 2015",
     endDate: "Dec 2015",
