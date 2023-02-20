@@ -2,11 +2,11 @@ export const authorName = 'Mario Cerven';
 export const githubName = 'mcerven';
 export const year = 2021;
 export const jobTitle = 'Full Stack Developer';
-export const welcomeText = `I'm ${authorName} and I work as a ${jobTitle}. Welcome to my personal website!`;
+export const welcomeText = `My name is ${authorName} and I work as a ${jobTitle}. Welcome to my personal website!`;
 
 export const experienceItems = [
   {
-    title: "Software Engineer",
+    title: "Senior Software Engineer",
     subTitle: "Panaxeo",
     startDate: "2020",
     location: "Remote",

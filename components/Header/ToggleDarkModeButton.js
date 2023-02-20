@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ToggleDarkModeButton({ isDarkTheme, setIsDarkTheme }) {
+export default function ToggleDarkModeButton({ isDarkTheme, toggleTheme }) {
   const imgSrc = isDarkTheme
     ? "/assets/images/brightness/light.png"
     : "/assets/images/brightness/dark.png";
@@ -12,7 +12,7 @@ export default function ToggleDarkModeButton({ isDarkTheme, setIsDarkTheme }) {
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
       className="w-6 h-6 ml-5 p-0.5 select-none focus:outline-none"
-      onClick={() => setIsDarkTheme(value => !value)}
+      onClick={toggleTheme}
     >
       <img src={imgSrc} alt="Brightness" />
     </button>
@@ -21,5 +21,5 @@ export default function ToggleDarkModeButton({ isDarkTheme, setIsDarkTheme }) {
 
 ToggleDarkModeButton.propTypes = {
   isDarkTheme: PropTypes.bool.isRequired,
-  setIsDarkTheme: PropTypes.func.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
 };

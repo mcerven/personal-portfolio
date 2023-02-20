@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import AOS from 'aos';
@@ -10,12 +10,41 @@ import { authorName, jobTitle } from 'data/site-data';
 
 const siteUrl = 'https://mariocerven.netlify.app';
 const imageUrl = `${siteUrl}/assets/images/profile/profile-picture.jpg`;
-const techStackShort = 'React, Angular, Next.js, .NET and more';
+const techStackShort = 'React, Next.js, Node.js, .NET and more';
 const pageTitle = `${authorName} | ${jobTitle}`;
 const description = `I build websites using ${techStackShort}`;
 
 export default function Layout({children}) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    themeCheck();
+  }, [isDarkTheme]);
+
+  // check and reset theme
+  const themeCheck = () => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      setIsDarkTheme(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setIsDarkTheme(false);
+    }
+  }
+
+  const toggleTheme = () => {
+    const theme = localStorage.getItem("theme");
+    if (theme) {
+      localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
+    setIsDarkTheme(!isDarkTheme);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -31,7 +60,7 @@ export default function Layout({children}) {
         <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1" />
         
         <meta data-n-head="ssr" data-hid="author" name="author" content="Mario Cerven" />
-        <meta data-n-head="ssr" data-hid="keywords" name="keywords" property="keywords" content="fullstack developer,full stack developer,full-stack developer,web developer,frontend developer,front-end developer,javascript,react,react.js,react developer,angular,angular developer,.net,.net developer,c#,c# developer" />
+        <meta data-n-head="ssr" data-hid="keywords" name="keywords" property="keywords" content="fullstack developer,full stack developer,full-stack developer,web developer,frontend developer,front-end developer,javascript,react,react.js,react developer,node.js,node.js developer,.net,.net developer,c#,c# developer" />
         <meta data-n-head="ssr" data-hid="description" name="description" property="description" content={description} />
         
         <meta data-n-head="ssr" data-hid="og:site_name" name="og:site_name" property="og:site_name" content="mariocerven.netlify.app" />
@@ -50,9 +79,9 @@ export default function Layout({children}) {
         <link rel="icon" href="/favicon.ico" />
         <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&amp;display=swap" defer />
       </Head>
-      <div className={`${isDarkTheme ? 'dark' : ''}`}>
+      <div>
         <div className="min-h-screen flex flex-col">
-          <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
+          <Header isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
           <main className="flex-1 bg-primaryBg transition-colors-300 pt-12 pb-14">
             <div className="container">
               {children}

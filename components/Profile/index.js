@@ -9,7 +9,7 @@ export default function Profile() {
       <div className="flex flex-wrap">
         <article className="md:w-1/2 z-10">
           <h1 data-aos="fade-up" className="text-6xl font-light tracking-wide text-accent">
-            Hi there!
+            Hi there! 👋
           </h1>
           <div data-aos="fade-up" className="my-4 text-2xl">
             <SocialMediaLinks />

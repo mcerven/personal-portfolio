@@ -7,7 +7,7 @@ import HeaderLinks from './HeaderLinks';
 import styles from './index.module.css';
 import debounce from 'utils/debounce';
 
-export default function Header({ isDarkTheme, setIsDarkTheme }) {
+export default function Header({ isDarkTheme, toggleTheme }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0); 
   const [visible, setVisible] = useState(true);  
 
@@ -38,7 +38,7 @@ export default function Header({ isDarkTheme, setIsDarkTheme }) {
               <span>{authorName}</span>
             </a>
           </Link>
-          <ToggleDarkModeButton isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
+          <ToggleDarkModeButton isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
         </div>
         <HeaderLinks />
       </div>
@@ -48,5 +48,5 @@ export default function Header({ isDarkTheme, setIsDarkTheme }) {
 
 Header.propTypes = {
   isDarkTheme: PropTypes.bool.isRequired,
-  setIsDarkTheme: PropTypes.func.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
 };
