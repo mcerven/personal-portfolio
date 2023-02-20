@@ -3,6 +3,7 @@ import SocialMediaLink from './SocialMediaLink';
 import LinkedinIcon from './LinkedinIcon';
 import GithubIcon from './GithubIcon';
 import CssBattleIcon from './CssBattleIcon';
+import MailIcon from './MailIcon';
 
 export default function SocialMediaLinks() {
   return (
@@ -15,6 +16,9 @@ export default function SocialMediaLinks() {
       </SocialMediaLink>
       <SocialMediaLink title="CSS Battle" href="https://cssbattle.dev/player/mcerven">
         <CssBattleIcon style={{ width: '1em' }} />
+      </SocialMediaLink>
+      <SocialMediaLink title="E-mail me" href="mailto:mario.cerven@gmail.com">
+        <MailIcon style={{ width: '1em' }} />
       </SocialMediaLink>
     </div>
   );
